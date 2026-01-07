@@ -13,7 +13,7 @@
 #Interview-Expected Approach (Using Recursion)
 def deleteMid(s):
     n = len(s)
-    mid_from_top = n // 2
+    mid = n // 2
 
     def helper(i):
         if not s:
@@ -23,7 +23,7 @@ def deleteMid(s):
         helper(i + 1)
 
         # skip correct middle element
-        if i != mid_from_top:
+        if i != mid:
             s.append(temp)
 
     helper(0)
