@@ -1,4 +1,4 @@
-# python file bag detail sathi
+# python file bagh detail sathi
 
 #monotonic incresing stack used in -- Next smaller, previous smaller
 #monoting Decreasing stack used in -next greater, previous greater, daily temperature

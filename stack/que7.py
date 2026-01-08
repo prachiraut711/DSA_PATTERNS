@@ -31,7 +31,7 @@
 
 # # this is MONTONIC DECRESING STACK EXAMPLE
 #(QUE MADHE RIGHT SIDE CH VICHARL MAG RIGHT TO LEFT TRAVERSE KEL AND LAST LA RESULT LA REVERSE KEL)
-#but ithe circular ahe nit output check kar
+#but ithe circular ahe nit output check kar mag 2 times loop run hoil right to left
 def nextGreaterElements(nums):
     n = len(nums)
     res = [-1] * n
