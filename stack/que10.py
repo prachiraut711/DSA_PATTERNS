@@ -27,9 +27,10 @@
 # If stack is empty, NSE is -1.
 # Push current element to stack.
 
+
 #if asked from RIGHT SIDE THE TRAVERSE FROM RIGHT TO LEFT AND INLAST REVERSE THE RESULT 
 #yat que madhe left side che smaller vvicharlet mag left side la tar right to left reverse ,fakt stack cha top > ahe ka te bagych element peksha smaller la
-
+#this is MONOTONIC INCREASING STACK  problem(means stack's top > element)
 def nextSmallerElement(arr):
     stack = []
     res = []

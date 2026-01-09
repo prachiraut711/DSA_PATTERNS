@@ -1,14 +1,8 @@
-
 # 85. Maximal Rectangle  (extension of largest reactangle area)
-
 
 # Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 
- 
-
 # Example 1:
-
-
 # Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 # Output: 6
 # Explanation: The maximal rectangle is shown in the above picture.
@@ -20,6 +14,12 @@
 
 # Input: matrix = [["1"]]
 # Output: 1
+
+
+#height = height of every i
+#width = right - left - 1
+# Area = height * width
+#this is MONOTONIC INCREASING STACK  problem(means stack's top > element)
 def maximalRectangle(matrix):
     if not matrix:
         return 0
@@ -64,8 +64,6 @@ def largestRectangleArea(heights):
             maxArea = max(area, maxArea)
 
         return maxArea
-
-
 
 print(maximalRectangle([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]))
 print(maximalRectangle([["0"]]))

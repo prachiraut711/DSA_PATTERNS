@@ -1,7 +1,7 @@
-# python file bagh detail sathi
+# python file-  bagh detail sathi
 
-#monotonic incresing stack used in -- Next smaller, previous smaller
-#monoting Decreasing stack used in -next greater, previous greater, daily temperature
+#monotonic increasing stack used in -- Next smaller, previous smaller, histogram or area of largest reactangle, remove k digit
+#monoting Decreasing stack used in -next greater, previous greater, daily temperature, stock span problem
 
 
 #monotonic incresing stack

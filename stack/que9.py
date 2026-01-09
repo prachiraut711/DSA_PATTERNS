@@ -11,7 +11,6 @@
 
 #this is MONOTONIC INCREASING STACK CH EXAMPLE AHE 
 #ithe left side ch bagychya smaller mad left to right loop
-
 def nextSmallerElement(arr):
     stack = []
     res = []

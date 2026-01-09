@@ -10,6 +10,8 @@
 # Output: [1, 1, 2, 4, 5, 1]
 # Explanation: For 10 and 4, no earlier prices are smaller, so span = 1 each. For 5, it is greater than 4, so span = 2. For 90, it is greater than 10, 5, and 4, so span = 4. For 120, it is greater than all previous prices, giving span = 5. Finally, 80 is smaller than 120, so span = 1.
 
+
+#this is MONOTONIC Decreasing STACK  problem(means stack's top < element)
 def stockProblem(arr):
     stack = []
     span = [0] * len(arr)

@@ -47,7 +47,6 @@ def buildArray(target, n):
 
     for i in range(1, target[-1] + 1):    #for taking i = 1 to stack[-1] (top) + 1
         result.append("Push")
-
         if i == target[j]:
             j += 1
         else:

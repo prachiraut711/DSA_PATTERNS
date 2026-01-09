@@ -2,7 +2,6 @@
 
 # Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
 
-
 # Example 1:
 
 # Input: num = "1432219", k = 3
@@ -19,6 +18,8 @@
 # Output: "0"
 # Explanation: Remove all the digits from the number and it is left with nothing which is 0.
 
+
+#this is MONOTONIC INCREASING STACK  problem(means stack's top > element)
 def removeKdigits(num, k):
     stack = []
     for i in num:
