@@ -22,3 +22,80 @@
 # For n = 2, node 1 with value 1 is the middle node, which is marked in red.
 # Node 0 with value 2 is the only node remaining after removing node 1.
 
+
+#O(1) correct approch
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+# mostly as jevva list print karychi asel delete karun tyatl kahi, tar return head karych
+def deleteMid(head):
+    if not head or head.next is None:  #some test case will be wrong idf not add this 
+        return None
+    
+    prev = None
+    slow = head
+    fast = head
+
+    while fast and fast.next:
+        fast = fast.next.next
+        prev = slow
+        slow = slow.next
+
+    prev.next = slow.next  #prev comes before sloe this sequence is important
+
+    return head  #head still points to the start of the modified list. jar prev return kel ast tar ardhi ch list ali asti jithe last la prev ahe thithun pn aplyala start pasun hav ,mahunu return head
+# mostly as jevva list print karychi asel delete karun tyatl kahi, tar return head karych
+
+def printList(head):
+    result = []
+    while head:
+        result.append(head.data)  #append kartana nehmi append head.data karych nust head kel tar error yeil
+        head = head.next
+    return result
+
+
+def main():
+    head = Node(1)
+    head.next = Node(2)
+    head.next.next  = Node(3)
+    head.next.next.next  = Node(4)
+
+    head = deleteMid(head)
+    print(printList(head))
+
+if __name__ == "__main__":
+    main()
+
+
+#O(n) if not remeber above then
+#O(n) approch
+class Node:
+    def __init__(self, data):
+        self.data = data 
+        self.next = None
+
+def getLength(head):
+    length = 0
+    while head:
+        length += 1
+        head = head.next
+    return length
+
+def deleteMid(head):
+    length = getLength(head)
+
+    if length == 1:
+        return None
+    
+    middle_index = length // 2
+
+    current = head
+    for i in range(middle_index - 1):
+        current = current.next
+    current.next = current.next.next
+    
+    return head
+
+
+
