@@ -38,7 +38,7 @@ q.enqueue(10)
 q.enqueue(20)
 q.enqueue(30)
 
-print(q.arr[q.front_index:])  #[10, 20, 30]
+print(q.arr[q.front_index : ])  #[10, 20, 30]
 print(q.dequeue())  #10
 print(q.isEmpty())  #False
 print(q.front())   #20
