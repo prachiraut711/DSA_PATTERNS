@@ -29,6 +29,9 @@
 #it is MONOTONIC DECRESING QUEUE (top of queue < arr[i])
 from collections import deque
 def maxSlidingWindow(nums, k):
+    if not nums or k == 0:
+        return []
+    
     dq = deque()
     res = []
 
