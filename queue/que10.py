@@ -84,7 +84,7 @@
 
 #IT IS USED BFS + QUEUE 
 from collections import deque
-def orangeRotting(grid):
+def rottingOrange(grid):
     rows = len(grid)
     col = len(grid[0])
     q = deque()
@@ -121,9 +121,9 @@ def orangeRotting(grid):
     
     return minutes if fresh == 0 else -1
 
-print(orangeRotting([[2,1,1],[1,1,0],[0,1,1]]))
-print(orangeRotting([[2,1,1],[0,1,1],[1,0,1]]))
-print(orangeRotting([[0,2]]))
+print(rottingOrange([[2,1,1],[1,1,0],[0,1,1]]))
+print(rottingOrange([[2,1,1],[0,1,1],[1,0,1]]))
+print(rottingOrange([[0,2]]))
 
         
 
