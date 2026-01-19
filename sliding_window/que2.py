@@ -33,24 +33,72 @@
 # -105 <= arr[i] <= 105
 # 1 <= k <= arr.size()
 
+# What the question wants
+
+# You are given:
+
+# An array arr
+
+# A window size k
+
+# For every contiguous subarray (window) of size k, you must:
+
+# Find the first negative number in that window
+
+# If there is no negative number, output 0
+
+# ❌ Brute Force (Why it’s not good)
+
+# For every window, scan all k elements → O(n × k)
+# With n up to 10⁶, this will TLE ❌
+
+# So we need an O(n) solution.
+
+# ✅ Optimal Approach (Sliding Window + Queue)
+# 💡 Key Idea
+
+# Maintain a queue that stores indices of negative numbers in the current window
+
+# The front of the queue always gives the first negative in the window
+
+# 🧠 Algorithm (Step-by-Step)
+
+# Create an empty queue q
+
+# Traverse array using index i
+
+# If arr[i] < 0, push index i into q
+
+# Once window size reaches k:
+
+# Remove elements from q that are outside the window
+
+# If q is empty → answer is 0
+
+# Else → answer is arr[q[0]]
+
 from collections import deque
 def firstNegative(arr, k):
-    q = deque()
-    res = []
+    q = deque()      # stores indices of negative numbers
+    result = []
 
     for i in range(len(arr)):
+        # Step 1: Add current element if it is negative
         if arr[i] < 0:
             q.append(i)
-        
+
+        # Step 2: When window size reaches k
         if i >= k - 1:
+            # Remove elements out of current window
             while q and q[0] < i - k + 1:
                 q.popleft()
-            
+
+            # Step 3: Get answer for current window
             if q:
-                res.append(arr[q[0]])
+                result.append(arr[q[0]])
             else:
-                res.append(0)
-    return res
+                result.append(0)
+    return result
 
 print(firstNegative([-8, 2, 3, -6, 10], 2))
 print(firstNegative([12, -1, -7, 8, -15, 30, 16, 28], 3))

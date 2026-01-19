@@ -7,7 +7,7 @@ max_sum = 0
 for i in range(k):
     sum += nums[i]
 
-max_sum = sum
+max_sum = sum  #dont forget this for same size arr len as k case
 
 for i in range(k, len(nums)):
     sum += nums[i] - nums[i - k]
