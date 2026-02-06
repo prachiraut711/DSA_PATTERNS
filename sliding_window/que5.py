@@ -94,7 +94,7 @@
 
 
 #so basically jevdi window ahe tyachi plus karychi ti sum jar < lower asel tar -1 kel ani jar sum > upper tar +1
-def  dietPlanPerformance(calories, k, lower, upper):
+def dietPlanPerformance(calories, k, lower, upper):
     window_sum = 0
     score = 0
 

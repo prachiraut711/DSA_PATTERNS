@@ -38,7 +38,7 @@ def maximumSubarraySum(nums, k):
 
     for right in range(len(nums)):
         # Remove duplicates
-        while nums[right] in seen:
+        while nums[right] in seen:   #while is imp if put if condition then will be wrong
             seen.remove(nums[left])
             window_sum -= nums[left]
             left += 1
