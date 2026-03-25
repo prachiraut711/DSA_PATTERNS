@@ -1,14 +1,7 @@
-
-# Code
-# Testcase
-# Testcase
-# Test Result
 # 424. Longest Repeating Character Replacement
-# Medium
-# Topics
-# premium lock icon
-# Companies
-# You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+# You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. 
+# You can perform this operation at most k times.
 
 # Return the length of the longest substring containing the same letter you can get after performing the above operations.
 
@@ -94,3 +87,17 @@ print(characterReplacement("AABABBA", 1))
 
 # ✅ Correct Line
 # count[ord(s[left]) - ord("A")] -= 1   # ✅ CORRECT   left vali ch freq shirnk karychi
+
+
+# 8. Key Interview Insight
+
+# 👉 We don’t decrease max_freq when shrinking window
+
+# Why?
+
+# It may become outdated
+# But still gives correct answer
+# Keeps complexity O(n)
+# ⏱️ 9. Complexity
+# Time: O(n)
+# Space: O(1) (26 chars)
