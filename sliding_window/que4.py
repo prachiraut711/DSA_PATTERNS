@@ -45,6 +45,7 @@ def maxVowel(s, k):
         
         if s[i - k] in vowel:   #ithe if vaprl tar correct bcz hi dusrich condition ahe na jar elif kel ast tar wrong bcz aplyala donhi check karychych na kiif chukl tar khalch
             count -= 1
+            
         max_count = max(max_count, count)
     
     return max_count

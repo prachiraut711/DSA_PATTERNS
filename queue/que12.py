@@ -74,7 +74,8 @@ class LRUCache:
         self.tail.prev = node
 
     # ---------------- MAIN FUNCTIONS ----------------
-
+    
+#int get(int key) Return the value of the key if the key exists, otherwise return -1.
     def get(self, key: int) -> int:
         if key not in self.cache:
             return -1
@@ -86,7 +87,9 @@ class LRUCache:
         self._add_to_end(node)
         
         return node.value
-
+    
+#void put(int key, int value) --> Update the value of the key if the key exists. Otherwise, add the key-value pair 
+#to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             node = self.cache[key]
