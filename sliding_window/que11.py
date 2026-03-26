@@ -5,9 +5,10 @@
 
 # You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
 
-# You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
-# Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.
-# Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
+# 1.You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
+# 2.Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. 
+# The picked fruits must fit in one of your baskets.
+# 3.Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 # Given the integer array fruits, return the maximum number of fruits you can pick.
 
 
@@ -100,21 +101,21 @@
 def totalFruit(fruits):
     left = 0 
     max_len = 0
-    count = {}
+    count_map = {}
 
     for right in range(len(fruits)):
         fruit = fruits[right]
 
-        if fruit in count:
-            count[fruit] += 1
+        if fruit in count_map:
+            count_map[fruit] += 1
         else:
-            count[fruit] = 1
+            count_map[fruit] = 1
         
-        while len(count) > 2:
+        while len(count_map) > 2:
             left_fruit = fruits[left]
-            count[left_fruit] -= 1
-            if count[left_fruit] == 0:
-                del count[left_fruit]
+            count_map[left_fruit] -= 1
+            if count_map[left_fruit] == 0:
+                del count_map[left_fruit]
             left += 1
         
         max_len = max(max_len, right -left + 1)
