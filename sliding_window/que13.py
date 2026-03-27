@@ -85,7 +85,7 @@ def findAnagrams(s, p):
         return []     #here not return False as in question we have to return list of indices
     
     count_p = [0] * 26   #frquency of p string
-    count_s = [0] * 26   #frquency of p string
+    count_s = [0] * 26   #frquency of s string
 
     for ch in p:
         count_p[ord(ch) - ord("a")] += 1

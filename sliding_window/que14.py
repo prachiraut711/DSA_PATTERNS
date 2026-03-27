@@ -1,14 +1,8 @@
 # 76. Minimum Window Substring
-# Hard
-# Topics
-# premium lock icon
-# Companies
-# Hint
+
 # Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
 
 # The testcases will be generated such that the answer is unique.
-
- 
 
 # Example 1:
 
@@ -126,7 +120,7 @@ def minWindow(s, t):
             left_char = s[left]
             window[left_char] -= 1
 
-            if left_char in count_t and window[left_char] < count_t[ch]:
+            if left_char in count_t and window[left_char] < count_t[left_char]:
                 have -= 1
 
             left += 1
