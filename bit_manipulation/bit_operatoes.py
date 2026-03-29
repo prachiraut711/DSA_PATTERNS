@@ -126,6 +126,15 @@
 
 # n ^ (1 << i)
 
+# Interview Tip
+
+# 👉 Always remember pattern:
+
+# & → remove/check
+# | → set
+# ^ → toggle
+# ~ → invert
+
 
 #INTEGER TO BINARY
 def int_to_binary(n):
