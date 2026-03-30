@@ -121,6 +121,7 @@
 # 👉 Get last set bit:
 
 # n & (-n)
+# n & -n   # RIGHTMOST SET BIT
 
 # 👉 Toggle ith bit:
 
