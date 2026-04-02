@@ -1,9 +1,5 @@
 # 153. Find Minimum in Rotated Sorted Array
-# Medium
-# Topics
-# premium lock icon
-# Companies
-# Hint
+
 # Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
 
 # [4,5,6,7,0,1,2] if it was rotated 4 times.
@@ -13,8 +9,6 @@
 # Given the sorted rotated array nums of unique elements, return the minimum element of this array.
 
 # You must write an algorithm that runs in O(log n) time.
-
- 
 
 # Example 1:
 
@@ -44,7 +38,7 @@ def findMin(nums):
     left = 0
     right = len(nums) - 1
 
-    while left < right:  #ithe single elemnt nums madhun ch pahije so left < right kel not left <= right he mostly target kivva first, second occurance madhe use hot
+    while left < right:  #ithe single elemnt nums madhun ch pahije so left < right kel not left <= right he mostly target kivva first, second occurance, kivva target asel tar madhe use hot
         mid = (left + right) // 2
 
         if nums[mid] > nums[right]:

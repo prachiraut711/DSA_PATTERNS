@@ -47,7 +47,7 @@ def divide(dividend, divisor):
 
     if (quotient == 1 << 31) and sign:
         return INT_MAX
-    elif (quotient == 1 << 310 and not sign):
+    elif (quotient == 1 << 31) and not sign:
         return INT_MIN
 
 

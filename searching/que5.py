@@ -1,5 +1,5 @@
 # Count number of occurrences (or frequency) in a sorted array
-# Last Updated : 3 Oct, 2025
+
 # Given a sorted array arr[] and an integer target, find the number of occurrences of target in given array.
 
 # Examples:

@@ -26,8 +26,7 @@
 # 🧠 Approach
 # Run binary search twice:
 # once for first position (yat go left for first occurance)   right = mid - 1
-# once for last position  (yat go right for first occurance)  left = mid + 1
-
+# once for last position  (yat go right for last occurance)  left = mid + 1
 
 def searchRange(nums, target):
     def findFirst():
