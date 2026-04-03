@@ -37,3 +37,7 @@ def sortColors(nums):
 
 print(sortColors([2,0,2,1,1,0]))
 print(sortColors([2,0,1]))
+
+# Complexity
+# Time: O(n)
+# Space: O(1)
